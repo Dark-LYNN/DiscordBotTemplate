@@ -27,5 +27,4 @@ export class ExtendedClient extends Client<true> {
   findEmoji(name: string): string | undefined {
     return this.emoji.get(name);
   }
-
 }

@@ -43,7 +43,7 @@ We encourage responsible disclosure of security vulnerabilities.
 We kindly request that you:
 
 - Refrain from disclosing the issue publicly until we have had
-a chance to address it.
+  a chance to address it.
 - Do not exploit the vulnerability for any reason.
 - Provide us with a reasonable amount of time to address and
   fix the vulnerability before any public disclosure.

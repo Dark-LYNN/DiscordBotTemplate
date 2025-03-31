@@ -26,6 +26,7 @@ export const hasRole = async (
 
     return member.roles.cache.has(roleId);
   } catch (error) {
+    // eslint-disable-next-line no-undef
     console.error(
       `❌ Error checking role for user ${userId} in guild ${guildId}:`,
       error,

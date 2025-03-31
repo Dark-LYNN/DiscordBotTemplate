@@ -1,7 +1,6 @@
 import { Interaction } from 'discord.js';
 import { ExtendedClient } from '../types/extendedClient';
 import { buttonHandler, handleInteraction } from '../bot/handler';
-import { logger } from '../utils';
 
 export default {
   name: 'interactionCreate',

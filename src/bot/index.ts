@@ -18,8 +18,8 @@ const client = new ExtendedClient({
     Partials.ThreadMember,
     Partials.Reaction,
     Partials.Message,
-    Partials.GuildScheduledEvent
-  ]
+    Partials.GuildScheduledEvent,
+  ],
 });
 
 (async () => {

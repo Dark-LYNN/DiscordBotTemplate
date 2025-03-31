@@ -13,10 +13,10 @@ and cohesive project.
 
 - Use **TypeScript** for all code.
 - Follow the **[ESLint](https://eslint.org/)** style guide with
-TypeScript-specific rules.
+  TypeScript-specific rules.
 - Indentation: Use **2 spaces**.
 - Line length: Aim for a maximum of **80 characters**;
-use line breaks for readability when needed.
+  use line breaks for readability when needed.
 - Avoid using `any` type unless absolutely necessary.
 - Add new types to `/src/types/`.
 
@@ -43,7 +43,7 @@ Below is the standard structure and its purpose:
    - `src/bot/` → Contains the bot’s main codes.
      - `handler/` → All bot-related handlers.
      - `index.ts` → The main bot entry file.
-2. Commands, Buttons, Modals and other Response related  items.
+2. Commands, Buttons, Modals and other Response related items.
    - `src/commands/` → Contains all Slash command files, organized by module.
      - `developer/` → Developer-only commands.
      - `utilities/` → Utility commands.
@@ -72,11 +72,11 @@ Below is the standard structure and its purpose:
 
   ```ts
   /**
-  * Loads a YAML translation file and retrieves the value for a given key.
-  * @param lang - The language code (e.g., 'en', 'es').
-  * @param key - The translation key in dot notation (e.g., 'greetings.hello').
-  * @returns The translation value or an error message if the key not found.
-  */
+   * Loads a YAML translation file and retrieves the value for a given key.
+   * @param lang - The language code (e.g., 'en', 'es').
+   * @param key - The translation key in dot notation (e.g., 'greetings.hello').
+   * @returns The translation value or an error message if the key not found.
+   */
   export function loadYaml(lang: string, key: string): string {
     // Implementation
   }
@@ -135,7 +135,7 @@ Below is the standard structure and its purpose:
 ## Git Commit Style
 
 - Use **[Conventional Commits](https://www.conventionalcommits.org/)**
-to structure commit messages:
+  to structure commit messages:
   - **feat:** A new feature.
   - **fix:** A bug fix.
   - **docs:** Documentation updates.
@@ -153,20 +153,20 @@ to structure commit messages:
 
 To ensure consistent releases and changelogs, follow these steps:
 
-1. Before releasing a new version, make sure your code adheres to the
-style guide by running:
+1.  Before releasing a new version, make sure your code adheres to the
+    style guide by running:
 
-    ```bash
-    pnpm run lint:all
-    ```
+        ```bash
+        pnpm run lint:all
+        ```
 
-2. Generate a new version and update the changelog by running:
+2.  Generate a new version and update the changelog by running:
 
     ```bash
     pnpm run release
     ```
 
-3. Push the changes and tags to the repository:
+3.  Push the changes and tags to the repository:
 
     ```bash
     git push --follow-tags origin main

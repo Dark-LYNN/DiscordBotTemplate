@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ChatInputCommandInteraction } from 'discord.js';
 import { ExtendedClient } from './extendedClient';
 

@@ -1,8 +1,4 @@
-import {
-  Client,
-  TextChannel,
-  PermissionResolvable,
-} from 'discord.js';
+import { Client, TextChannel, PermissionResolvable } from 'discord.js';
 
 /**
  * Checks if the user or bot has the specified permissions in a specific channel.
