@@ -7,5 +7,5 @@ export default (client: ExtendedClient) => {
   }
 
   setInterval(() => example(), 30 * 60 * 1000); // runs example every 30 minutes (in ms)
-}
+};
 // Loops don't run on start!
