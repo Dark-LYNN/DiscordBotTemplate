@@ -22,6 +22,7 @@ export const handleInteraction = async (
       `❌ | Error executing command: ${interaction.commandName}`,
       error,
     );
+    // eslint-disable-next-line no-undef
     console.error(error);
     await interaction.reply({
       content: 'There was an error executing this command.',

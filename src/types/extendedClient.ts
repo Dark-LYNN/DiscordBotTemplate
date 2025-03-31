@@ -2,6 +2,7 @@ import { Client, Collection } from 'discord.js';
 import { Command } from './commands';
 import { Button } from './buttons';
 import dotenv from 'dotenv';
+import process = require('process');
 
 dotenv.config();
 

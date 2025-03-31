@@ -26,6 +26,7 @@ export async function hasPerms(
 
     return permissions.every((permission) => memberPermissions.has(permission));
   } catch (error) {
+    // eslint-disable-next-line no-undef
     console.error(`❌ Error checking permissions for ${userID}:`, error);
     return false;
   }

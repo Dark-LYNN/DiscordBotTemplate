@@ -9,7 +9,8 @@ responsible manner.
 To report a security vulnerability,
 please email us at [contact@lynnux.xyz](mailto:contact@lynnux.xyz)
 or with our contact form at [lynnux.xyz](https://lynnux.xyz/#contact) with the details.
-We request that you do not publicly disclose the issue until we have had a chance to address it.
+We request that you do not publicly disclose the issue until we have
+had a chance to address it.
 
 ## Security Response Process
 
@@ -41,7 +42,8 @@ Thank you for helping us keep our community safe.
 We encourage responsible disclosure of security vulnerabilities.
 We kindly request that you:
 
-- Refrain from disclosing the issue publicly until we have had a chance to address it.
+- Refrain from disclosing the issue publicly until we have had
+a chance to address it.
 - Do not exploit the vulnerability for any reason.
 - Provide us with a reasonable amount of time to address and
   fix the vulnerability before any public disclosure.

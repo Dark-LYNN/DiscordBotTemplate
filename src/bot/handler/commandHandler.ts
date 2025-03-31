@@ -61,6 +61,7 @@ const loadCommandFolders = async (
 };
 
 export const loadCommands = async (client: ExtendedClient) => {
+  // eslint-disable-next-line no-undef
   const commandsPath = path.join(__dirname, '../../commands');
   await loadCommandFolders(client, commandsPath);
 

@@ -74,7 +74,8 @@ the expectations for participating in this project.
 
 ### Contributing Code
 
-- Before starting work, comment on an issue or open a discussion to avoid duplicate work.
+- Before starting work, comment on an issue or open a discussion to
+avoid duplicate work.
 - Follow the [Development Workflow](workflow.md) to make and test your changes.
 
 ---

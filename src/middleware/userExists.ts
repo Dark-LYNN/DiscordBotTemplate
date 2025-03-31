@@ -10,7 +10,7 @@ export const userExists = async (
   try {
     await client.users.fetch(userID, { force: true });
     return true;
-  } catch (error) {
+  } catch {
     return false;
   }
 };

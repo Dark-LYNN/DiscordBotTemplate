@@ -2,7 +2,8 @@
 
 To ensure consistency and readability across the codebase,
 we follow these coding and language style guidelines.
-Adhering to these guidelines is essential for maintaining a professional and cohesive project.
+Adhering to these guidelines is essential for maintaining a professional
+and cohesive project.
 
 ---
 
@@ -11,7 +12,8 @@ Adhering to these guidelines is essential for maintaining a professional and coh
 ### General Rules
 
 - Use **TypeScript** for all code.
-- Follow the **[ESLint](https://eslint.org/)** style guide with TypeScript-specific rules.
+- Follow the **[ESLint](https://eslint.org/)** style guide with
+TypeScript-specific rules.
 - Indentation: Use **2 spaces**.
 - Line length: Aim for a maximum of **80 characters**;
 use line breaks for readability when needed.
@@ -73,7 +75,7 @@ Below is the standard structure and its purpose:
   * Loads a YAML translation file and retrieves the value for a given key.
   * @param lang - The language code (e.g., 'en', 'es').
   * @param key - The translation key in dot notation (e.g., 'greetings.hello').
-  * @returns The translation value or an error message if the key or file is not found.
+  * @returns The translation value or an error message if the key not found.
   */
   export function loadYaml(lang: string, key: string): string {
     // Implementation
@@ -151,7 +153,8 @@ to structure commit messages:
 
 To ensure consistent releases and changelogs, follow these steps:
 
-1. Before releasing a new version, make sure your code adheres to the style guide by running:
+1. Before releasing a new version, make sure your code adheres to the
+style guide by running:
 
     ```bash
     pnpm run lint:all

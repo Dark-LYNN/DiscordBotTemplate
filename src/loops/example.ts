@@ -3,7 +3,8 @@ import { logger } from '../utils';
 
 export default (client: ExtendedClient) => {
   const example = async () => {
-    logger.info('A loop ran.');
+    const userName = client.user.id;
+    logger.info('A loop ran.' + userName);
   };
 
   setInterval(() => example(), 30 * 60 * 1000); // runs example every 30 minutes (in ms)
