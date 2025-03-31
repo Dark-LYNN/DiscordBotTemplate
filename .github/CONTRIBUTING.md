@@ -26,7 +26,8 @@ To help you get started, please follow this guide to ensure a smooth collaborati
 ## Getting Started
 
 1. **Fork the repository:**
-   - Visit the [repository](https://github.com/LynnuxDev/Akira) and click on the `Fork` button.
+   - Visit the [repository](https://github.com/LynnuxDev/Akira)
+   and click on the `Fork` button.
 2. **Clone your fork:**
 
    ```bash
@@ -46,7 +47,8 @@ To help you get started, please follow this guide to ensure a smooth collaborati
 
 ## Code of Conduct
 
-Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the expectations for participating in this project.
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand
+the expectations for participating in this project.
 
 ---
 
@@ -63,7 +65,8 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the expectat
 
 ### Suggesting Features
 
-- Check if your feature idea is already being discussed in the [issues list](https://github.com/orgs/LynnuxDev/discussions/categories/ideas).
+- Check if your feature idea is already being discussed in the
+[issues list](https://github.com/orgs/LynnuxDev/discussions/categories/ideas).
 - Open a new discussion and include:
   - A clear, descriptive title.
   - The problem your feature solves and/or what you want to see added to Akira.
@@ -107,7 +110,8 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the expectat
 
 4. **Commit your changes:**
 
-   - Use [conventional commits](https://www.conventionalcommits.org/) for commit messages (see [Commit Messages](#commit-messages)).
+   - Use [conventional commits](https://www.conventionalcommits.org/) for
+   commit messages (see [Commit Messages](#commit-messages)).
 
 5. **Push your branch:**
 
@@ -155,4 +159,5 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/) format:
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the same license as this repository ([BSD 4-Clause License](../LICENSE)).
+By contributing, you agree that your contributions will be licensed under
+the same license as this repository ([BSD 4-Clause License](../LICENSE)).
