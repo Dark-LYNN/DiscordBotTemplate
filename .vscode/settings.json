@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/node_modules/": true,
+    "**/pnpm-lock.yaml": true,
+    "**/.versionrc": true,
+    "**/*.db-journal": true,
+    "**/.eslintcache": true,
+    "**/tsconfig.tsbuildinfo": true,
+  },
+}

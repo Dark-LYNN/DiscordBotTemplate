@@ -1,0 +1,61 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "pnpm dlx eslint '**/*.{js,ts,tsx}' --cache",
+    "lint:fix": "pnpm dlx eslint '**/*.{js,ts,tsx}' --fix --cache",
+    "lint:spell": "pnpm dlx cspell -c .vscode/cspell/.cspell.config.json .",
+    "lint:format": "pnpm dlx prettier --write '**/*.{js,ts,json}'",
+    "lint:format-check": "pnpm dlx prettier --check '**/*.{js,ts,json}'",
+    "lint:all": "pnpm run lint:fix && pnpm run lint:spell && pnpm run lint:format",
+
+
+    "release": "pnpm dlx commit-and-tag-version",
+    "build": "tsc",
+    "start": "node dist/bot/index.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node -r src/bot/index.ts",
+    "test": "npm run build && node dist/tests/hello",
+    "db": "npx prisma format && npx prisma generate && npx prisma db push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "BSD-4-Clause",
+  "packageManager": "pnpm@10.7.0",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "path": "^0.12.7",
+    "prisma": "^6.5.0",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@discordjs/builders": "^1.10.1",
+    "@discordjs/rest": "^2.4.3",
+    "@prisma/client": "^6.5.0",
+    "@types/node": "^22.13.14",
+    "@types/ws": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "commit-and-tag-version": "^12.5.0",
+    "cspell": "^8.18.1",
+    "discord-api-types": "^0.37.119",
+    "discord.js": "^14.18.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "nodemon": "^3.1.9",
+    "pidusage": "^4.0.0",
+    "prettier": "3.5.3",
+    "typescript": "^5.8.2",
+    "winston": "^3.17.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
+    ]
+  }
+}

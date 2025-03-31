@@ -1,0 +1,7 @@
+{
+  "botName": "Discord Bot",
+  "primaryLanguage": "TypeScript",
+  "minimumNodeVersion": "22.3.0",
+  "communityStatus": "active",
+  "license": "BSD-4-Clause"
+}

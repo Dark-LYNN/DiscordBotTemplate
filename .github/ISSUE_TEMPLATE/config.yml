@@ -1,0 +1,15 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Community Support
+    url: https://github.com/LynnuxDev/Akira/discussions
+    about: Please ask and answer questions here.
+  - name: Report a vulnerability
+    url: https://github.com/LynnuxDev/Akira/security/advisories/new
+    about: Please report security vulnerabilities here.
+templates:
+  - name: "Bug report"
+    description: "Create a bug report template"
+    filename: "bug_report.md"
+  - name: "Feature request"
+    description: "Submit a feature request"
+    filename: "feature_request.md"

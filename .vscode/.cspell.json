@@ -1,0 +1,125 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": [
+    "en_US",
+    "softwareTerms",
+    "typescript",
+    "node",
+    "fonts",
+    "npm"
+  ],
+  "caseSensitive": false,
+  "globRoot": "../../",
+  "gitignoreRoot": [
+    "./"
+  ],
+  "ignorePaths": [
+    ".git/",
+    ".vscode/",
+    "prisma/",
+    "dist/",
+    "node_modules",
+    "package.json",
+    "pnpm-lock.yaml",
+    "LICENSE"
+  ],
+  // Cache settings.
+  "cache": {
+    "cacheLocation": "./cspell.cache",
+    "cacheFormat": "universal",
+    "useCache": false,
+    "cacheStrategy": "metadata"
+  },
+  // list of regular pattern names.
+  "ignoreRegExpList": [
+    "Email",
+    "Urls",
+    "UUID",
+    "Base64",
+    "HexValues",
+    "/.*\\.\\w{2,4}$/" // FileNames with 2 to 4 character extention.
+  ],
+  // Language overwrites
+  "languageSettings": [
+    {
+      "languageId": "markdown",
+      "caseSensitive": true,
+      "words": []
+    },
+    {
+      "languageId": "typescript",
+      "caseSensitive": false
+    }
+  ],
+  // additional custom dictionaries
+  "dictionaryDefinitions": [
+    {
+      "name": "companies",
+      "path": "./cspell/companies.txt"
+    },
+    {
+      "name": "custom-names",
+      "path": "./cspell/names.txt"
+    }
+  ],
+  // The words will always be incorrect, "Incorrect string: Suggested string, other Suggested string"
+  "flagWords": [
+    // en-GB to en-US
+    "colour: color",
+    "favourite: favorite",
+    "honour: honor",
+    "behaviour: behavior",
+    "cancelled: canceled",
+    "travelling: traveling",
+    "programme: program",
+    "grey: gray",
+    "centre: center",
+    "metre: meter",
+    "litre: liter",
+    "analyse: analyze",
+    "realise: realize",
+    "apologise: apologize",
+    "customise: customize",
+    "catalogue: catalog",
+    "dialogue: dialog",
+    // Common short terms
+    "incase: in case, encase",
+    "etc: etcetera",
+    "alot: a lot",
+    "alright: all right",
+    "gonna: going to",
+    "wanna: want to",
+    "kinda: kind of",
+    "lemme: let me",
+    "gotta: got to",
+    "gimme: give me",
+    "dunno: do not know, don't know",
+    "cuz: because",
+    "tho: though",
+    "thru: through",
+    "u: you",
+    "ur: your, you're",
+    "pls: please",
+    "aswell: as well",
+    "eachother: each other",
+    "it's: it is, it has",
+    "you're: you are",
+    "they're: they are",
+    "they're: they are",
+    "basedoff: based on"
+  ],
+  // List of words to be mark as correct.
+  "words": [
+    "discordbot",
+    "dotenv",
+    "eslintcache",
+    "issuehunt",
+    "jspm",
+    "Liberapay",
+    "otechie",
+    "patreon",
+    "pids",
+    "Tidelift"
+  ]
+}
