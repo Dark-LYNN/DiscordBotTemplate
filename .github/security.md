@@ -2,13 +2,13 @@
 
 ## Reporting a Vulnerability
 
-At LynnuxDev, we take security seriously. If you discover a security vulnerability
+At <YourName>, we take security seriously. If you discover a security vulnerability
 in this project, we appreciate your help in disclosing it to us in a
 responsible manner.
 
 To report a security vulnerability,
-please email us at [contact@lynnux.xyz](mailto:contact@lynnux.xyz)
-or with our contact form at [lynnux.xyz](https://lynnux.xyz/#contact) with the details.
+please email us at [contact@example.com](mailto:contact@example.com)
+or with our contact form at [example.com](https://example.com/#contact) with the details.
 We request that you do not publicly disclose the issue until we have
 had a chance to address it.
 
