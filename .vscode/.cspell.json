@@ -11,9 +11,7 @@
   ],
   "caseSensitive": false,
   "globRoot": "../../",
-  "gitignoreRoot": [
-    "./"
-  ],
+  "gitignoreRoot": ["./"],
   "ignorePaths": [
     ".git/",
     ".vscode/",
