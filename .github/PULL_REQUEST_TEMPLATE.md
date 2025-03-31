@@ -15,7 +15,7 @@ Closes #ISSUE_NUMBER
 - [ ] 🐛 Bug fix (non-breaking change that fixes an issue)
 - [ ] ✨ New feature (non-breaking change that adds functionality)
 - [ ] 💥 Breaking change (fix or feature that requires
-existing functionality to change)
+      existing functionality to change)
 - [ ] 📝 Documentation update
 - [ ] 🛠️ Refactor (code improvements without changing behavior)
 - [ ] 🔧 Other (please specify):

@@ -5,28 +5,19 @@
       "label": "pnpm run dev",
       "type": "shell",
       "command": "pnpm",
-      "args": [
-        "run",
-        "dev"
-      ]
+      "args": ["run", "dev"]
     },
     {
       "label": "pnpm run build",
       "type": "shell",
       "command": "pnpm",
-      "args": [
-        "run",
-        "build"
-      ]
+      "args": ["run", "build"]
     },
     {
       "label": "pnpm run start",
       "type": "shell",
       "command": "pnpm",
-      "args": [
-        "run",
-        "start"
-      ],
+      "args": ["run", "start"],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -36,10 +27,7 @@
       "label": "pnpm run lint",
       "type": "shell",
       "command": "pnpm",
-      "args": [
-        "run",
-        "lint"
-      ]
+      "args": ["run", "lint"]
     }
   ]
 }

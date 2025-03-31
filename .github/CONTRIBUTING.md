@@ -27,7 +27,7 @@ To help you get started, please follow this guide to ensure a smooth collaborati
 
 1. **Fork the repository:**
    - Visit the [repository](https://github.com/LynnuxDev/Akira)
-   and click on the `Fork` button.
+     and click on the `Fork` button.
 2. **Clone your fork:**
 
    ```bash
@@ -66,7 +66,7 @@ the expectations for participating in this project.
 ### Suggesting Features
 
 - Check if your feature idea is already being discussed in the
-[issues list](https://github.com/orgs/LynnuxDev/discussions/categories/ideas).
+  [issues list](https://github.com/orgs/LynnuxDev/discussions/categories/ideas).
 - Open a new discussion and include:
   - A clear, descriptive title.
   - The problem your feature solves and/or what you want to see added to Akira.
@@ -111,7 +111,7 @@ the expectations for participating in this project.
 4. **Commit your changes:**
 
    - Use [conventional commits](https://www.conventionalcommits.org/) for
-   commit messages (see [Commit Messages](#commit-messages)).
+     commit messages (see [Commit Messages](#commit-messages)).
 
 5. **Push your branch:**
 
