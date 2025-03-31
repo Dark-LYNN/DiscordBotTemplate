@@ -2,7 +2,8 @@
 
 ## Description
 
-Please include a summary of the changes and which issue is being fixed. List any dependencies that are required for this change.
+Please include a summary of the changes and which issue is being fixed.
+List any dependencies that are required for this change.
 
 ## Linked Issues
 
@@ -13,7 +14,8 @@ Closes #ISSUE_NUMBER
 
 - [ ] 🐛 Bug fix (non-breaking change that fixes an issue)
 - [ ] ✨ New feature (non-breaking change that adds functionality)
-- [ ] 💥 Breaking change (fix or feature that requires existing functionality to change)
+- [ ] 💥 Breaking change (fix or feature that requires
+existing functionality to change)
 - [ ] 📝 Documentation update
 - [ ] 🛠️ Refactor (code improvements without changing behavior)
 - [ ] 🔧 Other (please specify):
