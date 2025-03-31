@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "usernamehw.errorlens",
+    "emilast.logfilehighlighter",
+    "yzhang.markdown-all-in-one",
+    "kevinlaw.vscode-search-node-modules",
+    "christian-kohler.path-intellisense",
+    "prisma.prisma",
+    "qwtel.sqlite-viewer",
+    "esbenp.prettier-vscode"
+  ]
+}
