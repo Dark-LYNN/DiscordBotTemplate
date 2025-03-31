@@ -1,6 +1,7 @@
 # Styling Guidelines
 
-To ensure consistency and readability across the codebase, we follow these coding and language style guidelines.
+To ensure consistency and readability across the codebase,
+we follow these coding and language style guidelines.
 Adhering to these guidelines is essential for maintaining a professional and cohesive project.
 
 ---
@@ -12,7 +13,8 @@ Adhering to these guidelines is essential for maintaining a professional and coh
 - Use **TypeScript** for all code.
 - Follow the **[ESLint](https://eslint.org/)** style guide with TypeScript-specific rules.
 - Indentation: Use **2 spaces**.
-- Line length: Aim for a maximum of **80 characters**; use line breaks for readability when needed.
+- Line length: Aim for a maximum of **80 characters**;
+use line breaks for readability when needed.
 - Avoid using `any` type unless absolutely necessary.
 - Add new types to `/src/types/`.
 
@@ -32,7 +34,8 @@ Adhering to these guidelines is essential for maintaining a professional and coh
 
 #### Tree Structure
 
-All source code is placed inside the src/ directory. Below is the standard structure and its purpose:
+All source code is placed inside the src/ directory.
+Below is the standard structure and its purpose:
 
 1. Core Bot Files
    - `src/bot/` → Contains the bot’s main codes.
@@ -62,7 +65,7 @@ All source code is placed inside the src/ directory. Below is the standard struc
 
 ### Comments
 
-- Use comments sparingly but effectively to explain **why** rather than **what**.
+- Use comments sparingly but effectively to explain**why** rather than **what**.
 - For functions, use JSDoc-style comments to describe parameters and return values:
 
   ```ts
@@ -113,7 +116,8 @@ All source code is placed inside the src/ directory. Below is the standard struc
 - Be informative but concise:
 
   ```txt
-  "I couldn’t complete your request because the bot lacks permission to manage roles in this server."
+  "I couldn’t complete your request because the bot lacks permission
+  to manage roles in this server."
   ```
 
 ### User Engagement
@@ -128,7 +132,8 @@ All source code is placed inside the src/ directory. Below is the standard struc
 
 ## Git Commit Style
 
-- Use **[Conventional Commits](https://www.conventionalcommits.org/)** to structure commit messages:
+- Use **[Conventional Commits](https://www.conventionalcommits.org/)**
+to structure commit messages:
   - **feat:** A new feature.
   - **fix:** A bug fix.
   - **docs:** Documentation updates.
@@ -164,4 +169,6 @@ To ensure consistent releases and changelogs, follow these steps:
     git push --follow-tags origin main
     ```
 
-By adhering to these guidelines, we can ensure that the project remains a high-quality, professional, and user-friendly project. Thank you for contributing and maintaining consistency!
+By adhering to these guidelines, we can ensure that the project remains a
+high-quality, professional, and user-friendly project.
+Thank you for contributing and maintaining consistency!
