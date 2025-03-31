@@ -8,9 +8,9 @@ contact_links:
     url: https://github.com/LynnuxDev/Akira/security/advisories/new
     about: Please report security vulnerabilities here.
 templates:
-  - name: "Bug report"
-    description: "Create a bug report template"
-    filename: "bug_report.md"
-  - name: "Feature request"
-    description: "Submit a feature request"
-    filename: "feature_request.md"
+  - name: 'Bug report'
+    description: 'Create a bug report template'
+    filename: 'bug_report.md'
+  - name: 'Feature request'
+    description: 'Submit a feature request'
+    filename: 'feature_request.md'
