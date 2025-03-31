@@ -43,7 +43,7 @@ export default [
           SwitchCase: 1
         }
       ],
-      semi: ["error", "always"],
+      semi: ["error"],
     }
   },
   eslintConfigPrettier,
