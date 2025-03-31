@@ -5,8 +5,9 @@ import { logger } from '../../utils';
 
 export const loadLoops = async (client: ExtendedClient) => {
   const loopsPath = path.join(__dirname, '../../loops');
-  const loopFiles = fs.readdirSync(loopsPath)
-    .filter(file => file.endsWith('.js') && !file.startsWith('_'));
+  const loopFiles = fs
+    .readdirSync(loopsPath)
+    .filter((file) => file.endsWith('.js') && !file.startsWith('_'));
 
   for (const file of loopFiles) {
     const loopPath = path.join(loopsPath, file);

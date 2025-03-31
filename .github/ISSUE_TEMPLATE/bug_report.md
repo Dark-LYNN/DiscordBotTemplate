@@ -1,7 +1,7 @@
 ---
 name: Bug Report
 about: Report an issue to help improve the bot
-title: "[Bug] <brief title>"
+title: '[Bug] <brief title>'
 labels: bug
 assignees: Dark-LYNN
 ---
@@ -19,7 +19,7 @@ Steps to reproduce the behavior:
 1. **Action taken** – e.g., ran `/ping`
 2. **Expected behavior** – What should have happened?
 3. **Actual behavior** – What actually happened?
-4. **Bot's response (if any)** – *(Attach a screenshot if possible)*
+4. **Bot's response (if any)** – _(Attach a screenshot if possible)_
 5. **Does this happen every time?** – `[Yes/No]`
 
 ### **Expected Behavior**

@@ -5,6 +5,6 @@
     "**/.versionrc": true,
     "**/*.db-journal": true,
     "**/.eslintcache": true,
-    "**/tsconfig.tsbuildinfo": true,
-  },
+    "**/tsconfig.tsbuildinfo": true
+  }
 }

@@ -6,7 +6,9 @@ import path from 'path';
 
 export const loadButtons = async (client: ExtendedClient) => {
   const buttonsPath = path.join(__dirname, '../../buttons');
-  const buttonFiles = readdirSync(buttonsPath).filter(file => file.endsWith('.ts') || file.endsWith('.js'));
+  const buttonFiles = readdirSync(buttonsPath).filter(
+    (file) => file.endsWith('.ts') || file.endsWith('.js'),
+  );
 
   for (const file of buttonFiles) {
     const filePath = path.join(buttonsPath, file);
@@ -27,9 +29,11 @@ export const loadButtons = async (client: ExtendedClient) => {
   }
 };
 
-
 const handleInteractionError = async (interaction: ButtonInteraction) => {
-  const errorMessage = { content: 'There was an error handling this button.', flags: 'Ephemeral' as any };
+  const errorMessage = {
+    content: 'There was an error handling this button.',
+    flags: 'Ephemeral' as any,
+  };
 
   try {
     interaction.replied || interaction.deferred
@@ -40,14 +44,16 @@ const handleInteractionError = async (interaction: ButtonInteraction) => {
   }
 };
 
-
-export const buttonHandler = async (client: ExtendedClient, interaction: Interaction) => {
+export const buttonHandler = async (
+  client: ExtendedClient,
+  interaction: Interaction,
+) => {
   if (!interaction.isButton() || !interaction.inCachedGuild()) return;
 
-  const button = client.buttons.find(handler =>
+  const button = client.buttons.find((handler) =>
     typeof handler.customId === 'string'
       ? handler.customId === interaction.customId
-      : handler.customId(interaction.customId)
+      : handler.customId(interaction.customId),
   );
 
   if (!button) {
@@ -58,7 +64,10 @@ export const buttonHandler = async (client: ExtendedClient, interaction: Interac
   try {
     await button.execute(client, interaction as ButtonInteraction);
   } catch (error) {
-    logger.error(`❌ | Error executing button handler: ${interaction.customId}`, error);
+    logger.error(
+      `❌ | Error executing button handler: ${interaction.customId}`,
+      error,
+    );
     console.error(error);
     await handleInteractionError(interaction);
   }

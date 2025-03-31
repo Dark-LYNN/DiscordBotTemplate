@@ -1,2 +1,2 @@
-import { logger } from "@/utils";
-logger.info("I work");
+import { logger } from '@/utils';
+logger.info('I work');

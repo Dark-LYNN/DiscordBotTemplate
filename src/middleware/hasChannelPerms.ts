@@ -1,4 +1,9 @@
-import { Client, TextChannel, Permissions, PermissionResolvable } from 'discord.js';
+import {
+  Client,
+  TextChannel,
+  Permissions,
+  PermissionResolvable,
+} from 'discord.js';
 
 /**
  * Checks if the user or bot has the specified permissions in a specific channel.
@@ -12,7 +17,7 @@ export async function hasPerms(
   client: Client,
   userID: string,
   channel: TextChannel,
-  permissions: PermissionResolvable[]
+  permissions: PermissionResolvable[],
 ): Promise<boolean> {
   try {
     const member = await channel.guild.members.fetch(userID);
@@ -20,7 +25,7 @@ export async function hasPerms(
 
     if (!memberPermissions) return false;
 
-    return permissions.every(permission => memberPermissions.has(permission));
+    return permissions.every((permission) => memberPermissions.has(permission));
   } catch (error) {
     console.error(`❌ Error checking permissions for ${userID}:`, error);
     return false;

@@ -29,17 +29,18 @@ To help you get started, please follow this guide to ensure a smooth collaborati
    - Visit the [repository](https://github.com/LynnuxDev/Akira) and click on the `Fork` button.
 2. **Clone your fork:**
 
-    ```bash
-    git clone https://github.com/your-username/Akira.git
-    ```
+   ```bash
+   git clone https://github.com/your-username/Akira.git
+   ```
 
 3. **Set up your environment:**
+
    - Ensure you have [Node.js](https://nodejs.org/) installed (version 22 or higher).
    - Install dependencies:
 
-      ```bash
-      npm install
-      ```
+     ```bash
+     npm install
+     ```
 
 ---
 
@@ -78,41 +79,45 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the expectat
 ## Development Workflow
 
 1. **Create a branch:**
-    - Name your branch descriptively, e.g., `feat/command-handler` or `fix/message-typo`.
 
-      ```bash
-      git checkout -b fix/issue-123
-      ```
+   - Name your branch descriptively, e.g., `feat/command-handler` or `fix/message-typo`.
+
+     ```bash
+     git checkout -b fix/issue-123
+     ```
 
 2. **Make your changes:**
+
    - Follow the project's [coding style](./styling.md).
    - Add or update documentation/comments where needed.
 
 3. **Run tests:**
-    - Ensure your changes pass all tests.
 
-      ```bash
-      npm run test:all
-      ```
+   - Ensure your changes pass all tests.
 
-    - If applicable, run a bot instance to ensure stability:
+     ```bash
+     npm run test:all
+     ```
 
-      ```bash
-      npm run start
-      ```
+   - If applicable, run a bot instance to ensure stability:
+
+     ```bash
+     npm run start
+     ```
 
 4. **Commit your changes:**
-    - Use [conventional commits](https://www.conventionalcommits.org/) for commit messages (see [Commit Messages](#commit-messages)).
+
+   - Use [conventional commits](https://www.conventionalcommits.org/) for commit messages (see [Commit Messages](#commit-messages)).
 
 5. **Push your branch:**
 
-    ```bash
-    git push origin branch-name
-    ```
+   ```bash
+   git push origin branch-name
+   ```
 
 6. **Open a pull request:**
-    - Go to the [Pull Requests](https://github.com/LynnuxDev/Akira/pulls) section.
-    - Provide a detailed description of your changes.
+   - Go to the [Pull Requests](https://github.com/LynnuxDev/Akira/pulls) section.
+   - Provide a detailed description of your changes.
 
 ---
 
@@ -134,6 +139,7 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/) format:
 > [!NOTE]
 > First commit changes, then run `npm run build`,
 > after that commit the changelog and push to your repo.
+
 ---
 
 ## Pull Request Guidelines

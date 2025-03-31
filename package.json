@@ -10,8 +10,6 @@
     "lint:format": "pnpm dlx prettier --write '**/*.{js,ts,json}'",
     "lint:format-check": "pnpm dlx prettier --check '**/*.{js,ts,json}'",
     "lint:all": "pnpm run lint:fix && pnpm run lint:spell && pnpm run lint:format",
-
-
     "release": "pnpm dlx commit-and-tag-version",
     "build": "tsc",
     "start": "node dist/bot/index.js",

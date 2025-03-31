@@ -11,5 +11,5 @@ export default {
     } else if (interaction.isButton()) {
       await buttonHandler(client, interaction);
     }
-  }
+  },
 };

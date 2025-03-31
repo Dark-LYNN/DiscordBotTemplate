@@ -9,17 +9,27 @@ import { GuildMember, Guild } from 'discord.js';
  * @param guildId - The ID of the guild where the check is performed.
  * @returns {Promise<boolean>} - Whether the user has the role.
  */
-export const hasRole = async (client: ExtendedClient, userId: string, roleId: string, guildId: string): Promise<boolean> => {
+export const hasRole = async (
+  client: ExtendedClient,
+  userId: string,
+  roleId: string,
+  guildId: string,
+): Promise<boolean> => {
   try {
     const guild: Guild | undefined = client.guilds.cache.get(guildId);
     if (!guild) return false;
 
-    const member: GuildMember | undefined = await guild.members.fetch(userId).catch(() => undefined);
+    const member: GuildMember | undefined = await guild.members
+      .fetch(userId)
+      .catch(() => undefined);
     if (!member) return false;
 
     return member.roles.cache.has(roleId);
   } catch (error) {
-    console.error(`❌ Error checking role for user ${userId} in guild ${guildId}:`, error);
+    console.error(
+      `❌ Error checking role for user ${userId} in guild ${guildId}:`,
+      error,
+    );
     return false;
   }
 };
