@@ -1,7 +1,6 @@
 import {
   Client,
   TextChannel,
-  Permissions,
   PermissionResolvable,
 } from 'discord.js';
 
