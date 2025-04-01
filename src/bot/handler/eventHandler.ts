@@ -3,6 +3,8 @@ import { Client } from 'discord.js';
 import fs from 'fs';
 import path from 'path';
 
+const __dirname = path.dirname(module.filename);
+
 export const loadEvents = async (client: Client) => {
   const eventsPath = path.join(__dirname, '../../events');
   const eventFiles = fs

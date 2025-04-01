@@ -3,6 +3,8 @@ import { logger } from '../../utils';
 import { Interaction, ButtonInteraction } from 'discord.js';
 import { readdirSync } from 'fs';
 import path from 'path';
+import { error } from 'console';
+const __dirname = path.dirname(module.filename);
 
 export const loadButtons = async (client: ExtendedClient) => {
   const buttonsPath = path.join(__dirname, '../../buttons');
@@ -63,12 +65,12 @@ export const buttonHandler = async (
 
   try {
     await button.execute(client, interaction as ButtonInteraction);
-  } catch (error) {
+  } catch (err) {
     logger.error(
       `❌ | Error executing button handler: ${interaction.customId}`,
       error,
     );
-    console.error(error);
+    error(err);
     await handleInteractionError(interaction);
   }
 };

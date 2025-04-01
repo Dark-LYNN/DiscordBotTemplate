@@ -17,7 +17,7 @@ function runTestCommands() {
 
     execSync(script, { stdio: 'inherit' });
   } catch (err) {
-    error('Error running test commands:', error.message);
+    error('Error running test commands:', err.message);
     exit(1);
   }
 }

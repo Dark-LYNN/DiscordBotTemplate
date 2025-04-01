@@ -8,7 +8,7 @@ export interface Command {
     description: string;
   };
   execute: (
-    client: ExtendedClient,
-    interaction: ChatInputCommandInteraction<'cached'>,
+    _client: ExtendedClient,
+    _interaction: ChatInputCommandInteraction<'cached'>,
   ) => Promise<void>;
 }

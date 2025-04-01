@@ -3,9 +3,9 @@ import { ButtonInteraction } from 'discord.js';
 import { ExtendedClient } from './extendedClient';
 
 export interface Button {
-  customId: string | ((id: string) => boolean);
+  customId: string | ((_id: string) => boolean);
   execute: (
-    client: ExtendedClient,
-    interaction: ButtonInteraction,
+    _client: ExtendedClient,
+    _interaction: ButtonInteraction,
   ) => Promise<void>;
 }

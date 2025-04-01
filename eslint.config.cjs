@@ -11,6 +11,11 @@ module.exports = [
     },
     plugins: { '@typescript-eslint': ts },
     rules: {
+      '@typescript-eslint/no-unused-vars': ['error', {
+        argsIgnorePattern: '^_',  // Ignore variables starting with '_'
+        varsIgnorePattern: '^_',  // Ignore variables starting with '_'
+        caughtErrorsIgnorePattern: '^_'  // Ignore caught errors with '_'
+      }],
       indent: ['error', 2, { SwitchCase: 1 }],
       semi: ['error', 'always'],
     },
