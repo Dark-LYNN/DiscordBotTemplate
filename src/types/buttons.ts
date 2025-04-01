@@ -1,4 +1,3 @@
- 
 import { ButtonInteraction } from 'discord.js';
 import { ExtendedClient } from './extendedClient';
 

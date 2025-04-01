@@ -154,23 +154,23 @@ Below is the standard structure and its purpose:
 To ensure consistent releases and changelogs, follow these steps:
 
 1. Before releasing a new version, make sure your code adheres to the
-    style guide by running:
+   style guide by running:
 
-      ```bash
-      pnpm run lint:all
-      ```
+   ```bash
+   pnpm run lint:all
+   ```
 
 2. Generate a new version and update the changelog by running:
 
-    ```bash
-    pnpm run release
-    ```
+   ```bash
+   pnpm run release
+   ```
 
 3. Push the changes and tags to the repository:
 
-    ```bash
-    git push --follow-tags origin main
-    ```
+   ```bash
+   git push --follow-tags origin main
+   ```
 
 By adhering to these guidelines, we can ensure that the project remains a
 high-quality, professional, and user-friendly project.

@@ -1,7 +1,7 @@
 import { execSync } from 'child_process';
 import { getPackageManager } from './detectPackageManager.mjs';
-import { error } from "console";
-import { exit } from "process";
+import { error } from 'console';
+import { exit } from 'process';
 
 /**
  * Runs the all linters

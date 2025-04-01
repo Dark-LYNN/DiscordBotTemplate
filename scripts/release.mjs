@@ -1,7 +1,7 @@
 import { execSync } from 'child_process';
 import { getCommandPrefix } from './detectPackageManager.mjs';
-import { error } from "console";
-import { exit } from "process";
+import { error } from 'console';
+import { exit } from 'process';
 
 /**
  * Runs the tests
