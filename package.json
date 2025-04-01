@@ -4,13 +4,13 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "pnpm dlx eslint '**/*.{js,ts,tsx}' --cache",
-    "lint:fix": "pnpm dlx eslint '**/*.{js,ts,tsx}' --fix --cache",
-    "lint:spell": "pnpm dlx cspell -c .vscode/cspell/.cspell.config.json .",
-    "lint:format": "pnpm dlx prettier --write '**/*.{js,ts,json}'",
-    "lint:format-check": "pnpm dlx prettier --check '**/*.{js,ts,json}'",
-    "lint:all": "pnpm run lint:fix && pnpm run lint:spell && pnpm run lint:format",
-    "release": "pnpm dlx commit-and-tag-version",
+    "lint": "node scripts/lint.mjs",
+    "lint:fix": "node scripts/lint-fix.mjs",
+    "lint:spell": "node scripts/lint-spell.mjs",
+    "lint:format": "node scripts/lint-format.mjs'",
+    "lint:format-check": "node scripts/lint-format-check.mjs",
+    "lint:all": "node scripts/lint-all.mjs",
+    "release": "node scripts/release.mjs",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "nodemon --watch src --ext ts --exec ts-node -r src/bot/index.ts",
@@ -21,7 +21,6 @@
   "keywords": [],
   "author": "",
   "license": "BSD-4-Clause",
-  "packageManager": "pnpm@10.7.0",
   "dependencies": {
     "axios": "^1.8.4",
     "dotenv": "^16.4.7",
@@ -31,7 +30,6 @@
   "devDependencies": {
     "@discordjs/builders": "^1.10.1",
     "@discordjs/rest": "^2.4.3",
-    "@jest/globals": "^29.7.0",
     "@prisma/client": "^6.5.0",
     "@types/node": "^22.13.14",
     "@types/ws": "^8.18.0",
@@ -47,20 +45,11 @@
     "nodemon": "^3.1.9",
     "pidusage": "^4.0.0",
     "prettier": "3.5.3",
-    "ts-jest": "^29.3.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
     "winston": "^3.17.0"
   },
   "_moduleAliases": {
     "@": "dist/"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@prisma/client",
-      "@prisma/engines",
-      "esbuild",
-      "prisma"
-    ]
   }
 }
