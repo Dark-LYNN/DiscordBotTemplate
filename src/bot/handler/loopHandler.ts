@@ -2,10 +2,8 @@ import { ExtendedClient } from '../../types/extendedClient';
 import fs from 'fs';
 import path from 'path';
 import { logger } from '../../utils';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(module.filename);
 
 export const loadLoops = async (client: ExtendedClient) => {
   const loopsPath = path.join(__dirname, '../../loops');
