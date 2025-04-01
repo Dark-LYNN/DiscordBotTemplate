@@ -40,41 +40,42 @@ Project Structure
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/Dark-LYNN/DiscordBotTemplate.git
-    cd discordbot-template
-    ```
+   ```bash
+   git clone https://github.com/Dark-LYNN/DiscordBotTemplate.git
+   cd discordbot-template
+   ```
 
 2. Install dependencies with your preferred package manager:
 
-    ```bash
-    # Using pnpm
-    pnpm install
+   ```bash
+   # Using pnpm
+   pnpm install
 
-    # Using npm
-    npm install
+   # Using npm
+   npm install
 
-    # Using yarn
-    yarn install
-    ```
+   # Using yarn
+   yarn install
+   ```
 
 3. Set up the environment variables:
-    - Create a `.env` file in the root directory.
-    - Add your bot token and database URL:
 
-      ```env
-      ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=true
-      DATABASE_URL=file:./database.db
+   - Create a `.env` file in the root directory.
+   - Add your bot token and database URL:
 
-      DISCORD_TOKEN=your-bot-token
-      DISCORD_CLIENT_ID=your-bot-client-id
-      ```
+     ```env
+     ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=true
+     DATABASE_URL=file:./database.db
+
+     DISCORD_TOKEN=your-bot-token
+     DISCORD_CLIENT_ID=your-bot-client-id
+     ```
 
 4. Initialize the database:
 
-    ```bash
-    npm run db  # or pnpm db / yarn db
-    ```
+   ```bash
+   npm run db  # or pnpm db / yarn db
+   ```
 
 ## Usage
 

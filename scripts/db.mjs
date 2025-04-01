@@ -1,5 +1,8 @@
 import { execSync } from 'child_process';
-import { getCommandPrefix, getPackageManager } from './detectPackageManager.mjs';
+import {
+  getCommandPrefix,
+  getPackageManager,
+} from './detectPackageManager.mjs';
 
 /**
  * Runs Prisma database commands using the detected package manager.
@@ -11,7 +14,7 @@ function runDatabaseCommands() {
   try {
     execSync(
       `${commandPrefix} prisma format && ${commandPrefix} prisma generate && ${commandPrefix} prisma db push`,
-      { stdio: 'inherit' }
+      { stdio: 'inherit' },
     );
   } catch (error) {
     console.error('Error running database commands:', error.message);

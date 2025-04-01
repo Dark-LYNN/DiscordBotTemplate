@@ -1,6 +1,6 @@
 {
   "files.exclude": {
     "**/.versionrc": true,
-    "**/*.db-journal": true,
+    "**/*.db-journal": true
   }
 }
