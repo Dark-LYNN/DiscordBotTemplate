@@ -1,5 +1,9 @@
 # Discord.js Bot Template (TypeScript)
 
+[![Maintainability][maintainabilityImage]][maintainabilityURL]
+[![Discord.js][discordJSBadge]][discordjsURL]
+[![License: BSD-4-Clause][licenseBadge]][licenseURL]
+
 This is a template for a Discord.js bot written in TypeScript.
 It is designed to work with `pnpm`, `npm`, and `yarn` and
 includes a Prisma database integration.
@@ -124,3 +128,10 @@ See the [LICENSE](./LICENSE) file for details.
 ## Acknowledgments
 
 Thanks to all contributors and open-source projects that inspired this template.
+
+[maintainabilityImage]: https://qlty.sh/badges/3c84a17d-831c-4f7d-bf04-3b587065f27b/maintainability.svg
+[maintainabilityURL]: https://qlty.sh/gh/Dark-LYNN/projects/DiscordBotTemplate
+[discordJSBadge]: https://img.shields.io/badge/discord.js-^14.18.0-orange
+[discordjsURL]: https://discord.js.org/
+[licenseBadge]: https://img.shields.io/badge/license-BSD--4--Clause-blue
+[licenseURL]: https://www.tldrlegal.com/license/4-clause-bsd
