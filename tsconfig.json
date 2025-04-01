@@ -16,18 +16,8 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "@dist/*": ["dist/*"]
     }
   },
   "include": ["src/**/*.ts"],
-  "exclude": [
-    "**/*.d.ts",
-    "node_modules",
-    "dist",
-    ".vscode",
-    ".git",
-    ".github",
-    "logs",
-    "prisma"
-  ]
+  "exclude": ["node_modules"]
 }
