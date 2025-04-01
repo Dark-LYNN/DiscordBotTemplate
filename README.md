@@ -1,8 +1,10 @@
 # Discord.js Bot Template (TypeScript)
 
 This is a template for a Discord.js bot written in TypeScript.
-It is designed to work with `pnpm`, `npm`, and `yarn` and includes a Prisma database integration.
-The template is licensed under BSD-4-Clause and comes with essential GitHub-related files.
+It is designed to work with `pnpm`, `npm`, and `yarn` and
+includes a Prisma database integration.
+The template is licensed under BSD-4-Clause and
+comes with essential GitHub-related files.
 
 ## Features
 
@@ -116,7 +118,8 @@ For info about contributing see our [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ## License
 
-This project is licensed under the **BSD-4-Clause License**. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **BSD-4-Clause License**.
+See the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgments
 

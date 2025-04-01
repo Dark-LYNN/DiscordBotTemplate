@@ -121,7 +121,8 @@ the expectations for participating in this project.
    ```
 
 6. **Open a pull request:**
-   - Go to the [Pull Requests](https://github.com/Dark-LYNN/DiscordBotTemplate/pulls) section.
+   - Go to the [Pull Requests](https://github.com/Dark-LYNN/DiscordBotTemplate/pulls)
+section.
    - Provide a detailed description of your changes.
 
 ---

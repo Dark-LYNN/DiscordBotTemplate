@@ -73,7 +73,7 @@ describe('Winston Logger Tests', () => {
     console.log = originalConsoleLog;
 
     const logRegex = new RegExp(
-      `${timestamp} \[\\[32minfo\\[39m\]: ${timestamp} - Testing dynamic timestamp`,
+      `${timestamp} \[\\[32minfo\\[39m]: ${timestamp} - Testing dynamic timestamp`,
     );
     assert.ok(logRegex.test(loggedOutput));
   });
