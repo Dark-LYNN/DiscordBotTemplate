@@ -26,12 +26,12 @@ To help you get started, please follow this guide to ensure a smooth collaborati
 ## Getting Started
 
 1. **Fork the repository:**
-   - Visit the [repository](https://github.com/<YourName>/<YourRepo>)
+   - Visit the [repository](https://github.com/Dark-LYNN/DiscordBotTemplate)
      and click on the `Fork` button.
 2. **Clone your fork:**
 
    ```bash
-   git clone https://github.com/your-username/<YourRepo>.git
+   git clone https://github.com/Dark-LYNN/DiscordBotTemplate.git
    ```
 
 3. **Set up your environment:**
@@ -56,7 +56,7 @@ the expectations for participating in this project.
 
 ### Reporting Bugs
 
-- Check if the issue already exists in the [issues list](https://github.com/<YourName>/<YourRepo>/issues).
+- Check if the issue already exists in the [issues list](https://github.com/Dark-LYNN/DiscordBotTemplate/issues).
 - Create a new issue and include:
   - A clear, descriptive title.
   - Steps to reproduce the bug.
@@ -66,10 +66,10 @@ the expectations for participating in this project.
 ### Suggesting Features
 
 - Check if your feature idea is already being discussed in the
-  [issues list](https://github.com/orgs/<YourOrg>/discussions/categories/ideas).
+  [issues list](https://github.com/orgs/LynnuxDev/discussions/categories/ideas).
 - Open a new discussion and include:
   - A clear, descriptive title.
-  - The problem your feature solves and/or what you want to see added to <YourName>.
+  - The problem your feature solves and/or what you want to see added to This Project.
   - Details of the proposed solution.
 
 ### Contributing Code
@@ -121,7 +121,7 @@ the expectations for participating in this project.
    ```
 
 6. **Open a pull request:**
-   - Go to the [Pull Requests](https://github.com/<YourName>/<YourRepo>/pulls) section.
+   - Go to the [Pull Requests](https://github.com/Dark-LYNN/DiscordBotTemplate/pulls) section.
    - Provide a detailed description of your changes.
 
 ---
