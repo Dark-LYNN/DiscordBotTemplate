@@ -2,6 +2,8 @@ import { ExtendedClient } from '@/types/extendedClient';
 import { GatewayIntentBits, Partials } from 'discord.js';
 import { logger } from '@/utils';
 import { loadButtons, loadLoops, loadCommands, loadEvents } from './handler';
+import { loadModals } from './handler/modalHandler';
+import { env } from 'process';
 
 const client = new ExtendedClient({
   intents: [
@@ -27,8 +29,9 @@ const client = new ExtendedClient({
   await loadCommands(client);
   await loadButtons(client);
   await loadLoops(client);
+  await loadModals(client);
 })();
 
-client.login(client.env('DISCORD_TOKEN')).catch((error: any) => {
+client.login(env.DISCORD_TOKEN).catch((error) => {
   logger.error('Failed to log in:', error);
 });

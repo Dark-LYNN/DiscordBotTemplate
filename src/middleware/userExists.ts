@@ -1,5 +1,5 @@
 import { Client } from 'discord.js';
-import { userIdRegex } from '@/utils/regex';
+import { userIdRegex } from '@/types/regex';
 
 export const userExists = async (
   client: Client,

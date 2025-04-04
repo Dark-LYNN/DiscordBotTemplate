@@ -1,3 +1,3 @@
-interface EmojiMap {
+export interface EmojiMap {
   [key: string]: string;
 }

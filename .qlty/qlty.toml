@@ -66,26 +66,26 @@ name = "checkov"
 [[plugin]]
 name = "eslint"
 version = "9.7.0"
-package_file = "package.json"
-package_filters = ["eslint", "prettier"]
+package_file = ".qlty/configs/package.json"
+package_filters = ["eslint"]
 
-[[plugin]]
-name = "golangci-lint"
+# [[plugin]]
+# name = "golangci-lint"
 
 [[plugin]]
 name = "markdownlint"
 version = "0.41.0"
 
-[[plugin]]
-name = "prettier"
-package_file = "package.json"
-package_filters = ["prettier"]
+# [[plugin]]
+# name = "prettier"
+# package_file = "package.json"
+# package_filters = ["prettier"]
 
-[[plugin]]
-name = "radarlint-js"
+# [[plugin]]
+# name = "radarlint-js"
 
-[[plugin]]
-name = "ripgrep"
+# [[plugin]]
+# name = "ripgrep"
 
 [[plugin]]
 name = "trivy"
@@ -94,8 +94,8 @@ drivers = [
   "fs-vuln",
 ]
 
-[[plugin]]
-name = "trufflehog"
+# [[plugin]]
+# name = "trufflehog"
 
 [[plugin]]
 name = "yamllint"

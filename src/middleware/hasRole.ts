@@ -1,4 +1,4 @@
-import { ExtendedClient } from '@/types/extendedClient';
+import { ExtendedClient } from '../types/extendedClient';
 import { GuildMember, Guild } from 'discord.js';
 
 /**
@@ -19,14 +19,12 @@ export const hasRole = async (
     const guild: Guild | undefined = client.guilds.cache.get(guildId);
     if (!guild) return false;
 
-    const member: GuildMember | undefined = await guild.members
-      .fetch(userId)
+    const member: GuildMember | undefined = await guild.members.fetch(userId)
       .catch(() => undefined);
     if (!member) return false;
 
     return member.roles.cache.has(roleId);
   } catch (error) {
-    // eslint-disable-next-line no-undef
     console.error(
       `❌ Error checking role for user ${userId} in guild ${guildId}:`,
       error,

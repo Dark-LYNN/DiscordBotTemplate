@@ -16,7 +16,8 @@
     "dev": "nodemon --watch src --ext ts --exec ts-node -r src/bot/index.ts",
     "test:all": "node scripts/test.mjs",
     "test:logger": "node dist/tests/logger",
-    "db": "node scripts/db.mjs"
+    "db": "node scripts/db.mjs",
+    "commands:remove": "node scripts/unregister.mjs"
   },
   "keywords": [],
   "author": "",

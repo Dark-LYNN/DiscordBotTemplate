@@ -1,10 +1,11 @@
 import { ButtonInteraction } from 'discord.js';
 import { ExtendedClient } from './extendedClient';
+import { InteractionReturn } from './interactionReturn';
 
 export interface Button {
-  customId: string | ((_id: string) => boolean);
+  customId: string | ((id: string) => boolean)
   execute: (
-    _client: ExtendedClient,
-    _interaction: ButtonInteraction,
-  ) => Promise<void>;
+    client: ExtendedClient,
+    interaction: ButtonInteraction
+  ) => Promise<InteractionReturn>;
 }
