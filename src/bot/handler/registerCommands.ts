@@ -50,7 +50,7 @@ const registeredCommands = async (
 const handleGuildCommands = (
   guilds: string[],
   json: CommandJson,
-  guildCommandsMap: GuildCommandMap
+  guildCommandsMap: GuildCommandMap,
 ) => {
   for (const guildId of guilds) {
     if (!guildCommandsMap.has(guildId)) guildCommandsMap.set(guildId, []);
@@ -60,7 +60,7 @@ const handleGuildCommands = (
 
 const handleGlobalCommand = (
   json: CommandJson,
-  globalCommands: CommandJson[]
+  globalCommands: CommandJson[],
 ) => {
   globalCommands.push(json);
 };
