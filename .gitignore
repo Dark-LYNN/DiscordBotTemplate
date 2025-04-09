@@ -5,6 +5,7 @@ dist/
 package-lock.json
 pnpm-lock.yaml
 .qlty/
+pnpm-workspace.yaml
 
 # Database
 **/*.db

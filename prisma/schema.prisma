@@ -11,3 +11,8 @@ model User {
   user_id   String   @id @unique /* UserId */
   createdAt DateTime @default(now()) /* User Added To DB Date */
 }
+
+model test {
+  user_id   String   @id @unique
+  createdAt DateTime @default(now())
+}
