@@ -7,7 +7,7 @@ import path from 'path';
 export const loadButtons = async (
   client: ExtendedClient,
 ):Promise<void> => {
-  const buttonsPath = path.join(__dirname, '../../events/buttons');
+  const buttonsPath = path.join(__dirname, '../../buttons');
   const buttonFiles = readdirSync(buttonsPath).filter(file => file.endsWith('.ts') || file.endsWith('.js'));
 
   for (const file of buttonFiles) {
