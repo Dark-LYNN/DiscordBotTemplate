@@ -40,6 +40,7 @@ exclude_patterns = [
   "**/vendor/**",
   "**/assets/**",
   "**/CHANGELOG.*",
+  "**/__test__/**",
 ]
 
 test_patterns = [
@@ -51,6 +52,7 @@ test_patterns = [
   "**/*_spec.*",
   "**/test_*.*",
   "**/spec_*.*",
+  "**/*.test.ts",
 ]
 
 [smells]
