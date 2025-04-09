@@ -1,3 +1,4 @@
+---
 name: QLTY Code Coverage
 on:
   push:
@@ -39,4 +40,3 @@ jobs:
         with:
           coverage-token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
           files: coverage/lcov.info
-
