@@ -7,6 +7,6 @@ export default {
     client: ExtendedClient,
     interaction: ModalSubmitInteraction,
   ): Promise<void> {
-    interaction.reply({content: `this modelId is exactly test-modal.`})
-  }
-}
+    interaction.reply({content: 'this modelId is exactly test-modal.'});
+  },
+};

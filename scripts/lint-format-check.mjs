@@ -1,6 +1,6 @@
 import { execSync } from 'child_process';
 import { getCommandPrefix } from './detectPackageManager.mjs';
-
+import { exit } from 'process';
 /**
  * Runs prettier
  */
@@ -13,7 +13,7 @@ function runLintCommands() {
     });
   } catch (error) {
     console.error('Error running test commands:', error.message);
-    process.exit(1);
+    exit(1);
   }
 }
 

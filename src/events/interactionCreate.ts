@@ -5,7 +5,10 @@ import { modalHandler } from '@/bot/handler/modalHandler';
 
 export default {
   name: 'interactionCreate',
-  async execute(client: ExtendedClient, interaction: Interaction) {
+  async execute(
+    client: ExtendedClient,
+    interaction: Interaction,
+  ):Promise<void> {
     if (interaction.isChatInputCommand()) {
       await handleInteraction(client, interaction);
     } else if (interaction.isButton()) {

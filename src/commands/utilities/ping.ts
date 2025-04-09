@@ -11,7 +11,7 @@ export default {
   async execute(
     client: ExtendedClient,
     interaction: ChatInputCommandInteraction,
-  ) {
+  ):Promise<void> {
     if (!client.isReady()) {
       await interaction.reply('<:Fail:1355193840276869330> Bot is not ready.');
       logger.debug('got /ping request but client is not ready.');
@@ -31,7 +31,9 @@ export default {
 
     const latency = Date.now() - interaction.createdTimestamp;
     await interaction.reply(
-      `🏓 Pong! Latency: \`${latency}ms\`, API Latency: \`${apiLatency}ms\`, Roundtrip: \`${Math.round(performance.now() - start)}ms\``,
+      `🏓 Pong! Latency: \`${latency}ms\`, `+
+      `API Latency: \`${apiLatency}ms\`, ` +
+      `Roundtrip: \`${Math.round(performance.now() - start)}ms\``,
     );
   },
 };

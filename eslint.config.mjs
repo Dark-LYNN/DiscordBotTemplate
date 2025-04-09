@@ -22,7 +22,7 @@ export default defineConfig([
       curly: ['error', 'multi-line'],
       semi: ['error', 'always'],
       indent: ['error', 2, { SwitchCase: 1 }],
-      'max-len': ['error', { code: 80, ignoreStrings: true }],
+      'max-len': ['error', { code: 80, ignoreStrings: true, ignoreComments: true }],
       'no-implied-eval': 'error',
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       quotes: ['error', 'single', { avoidEscape: true }],

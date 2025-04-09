@@ -15,7 +15,9 @@ function runDatabaseCommands() {
 
   try {
     execSync(
-      `${commandPrefix} prisma format && ${commandPrefix} prisma generate && ${commandPrefix} prisma db push`,
+      `${commandPrefix} prisma format && ` +
+      `${commandPrefix} prisma generate && ` +
+      `${commandPrefix} prisma db push`,
       { stdio: 'inherit' },
     );
   } catch (err) {

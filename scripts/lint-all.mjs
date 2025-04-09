@@ -12,8 +12,12 @@ function runLinterCommands() {
   try {
     const script =
       packageManager === 'yarn'
-        ? `${packageManager} lint:fix && ${packageManager} lint:spell && ${packageManager} lint:format`
-        : `${packageManager} run lint:fix && ${packageManager} run lint:spell && ${packageManager} lint:format`;
+        ? `${packageManager} lint:fix && ` +
+          `${packageManager} lint:spell && ` +
+          `${packageManager} lint:format`
+        : `${packageManager} run lint:fix && ` +
+          `${packageManager} run lint:spell && ` +
+          `${packageManager} lint:format`;
 
     execSync(script, { stdio: 'inherit' });
   } catch (err) {

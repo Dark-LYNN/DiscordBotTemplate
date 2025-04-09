@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { env } from 'process';
 import { execSync } from 'child_process';
 

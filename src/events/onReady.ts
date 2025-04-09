@@ -5,7 +5,7 @@ import { Events } from 'discord.js';
 export default {
   name: Events.ClientReady,
   once: true,
-  async execute(client: ExtendedClient) {
+  async execute(client: ExtendedClient):Promise<void> {
     logger.info(`✅ | Logged in as ${client.user?.tag}`);
 
     /**
@@ -17,6 +17,7 @@ export default {
     });
 
     logger.info(`🌎 | Connected to ${client.guilds.cache.size} guild(s).`);
+    return;
   },
 };
 

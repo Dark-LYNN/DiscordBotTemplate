@@ -24,7 +24,10 @@ export const loadModals = async (client: ExtendedClient): Promise<void> => {
   }
 };
 
-export const modalHandler = async (client: ExtendedClient, interaction: Interaction): Promise<void> => {
+export const modalHandler = async (
+  client: ExtendedClient,
+  interaction: Interaction,
+): Promise<void> => {
   if (!interaction.isModalSubmit() || !interaction.inCachedGuild()) return;
 
   const modal = client.modals.find(handler =>
@@ -42,19 +45,27 @@ export const modalHandler = async (client: ExtendedClient, interaction: Interact
     await modal.execute(client, interaction as ModalSubmitInteraction<'cached'>);
     logger.debug(`📝 | Executed modal handler: ${interaction.customId}`);
   } catch (err) {
-    logger.error(`❌ | Error executing modal handler: ${interaction.customId}`, err);
+    logger.error(
+      `❌ | Error executing modal handler: ${interaction.customId}`,
+      err,
+    );
     console.error(err);
     if (interaction.replied || interaction.deferred) {
       try {
         await interaction.followUp({ content: 'There was an error handling this modal.', ephemeral: true });
       } catch (followUpErr) {
-        logger.error(`❌ | Error while trying to followUp on a modal interaction: ${followUpErr}`);
+        logger.error(
+          '❌ | Error while trying to followUp on a modal interaction:' +
+          `${followUpErr}`,
+        );
       }
     } else {
       try {
         await interaction.reply({ content: 'There was an error handling this modal.', ephemeral: true });
       } catch (replyErr) {
-        logger.error(`❌ | Error while trying to reply to a modal interaction: ${replyErr}`);
+        logger.error(
+          `❌ | Error while trying to reply to a modal interaction: ${replyErr}`,
+        );
       }
     }
   }
