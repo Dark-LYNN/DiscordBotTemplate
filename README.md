@@ -2,6 +2,7 @@
 
 [![Maintainability][maintainabilityImage]][maintainabilityURL]
 [![Discord.js][discordJSBadge]][discordjsURL]
+[![Code Coverage][coverageImage]][coverageLink]
 [![License: BSD-4-Clause][licenseBadge]][licenseURL]
 
 This is a template for a Discord.js bot written in TypeScript.
@@ -134,3 +135,5 @@ Thanks to all contributors and open-source projects that inspired this template.
 [discordjsURL]: https://discord.js.org/
 [licenseBadge]: https://img.shields.io/badge/license-BSD--4--Clause-blue
 [licenseURL]: https://www.tldrlegal.com/license/4-clause-bsd
+[coverageImage]: https://qlty.sh/badges/3c84a17d-831c-4f7d-bf04-3b587065f27b/test_coverage.svg
+[coverageLink]: https://qlty.sh/gh/Dark-LYNN/projects/DiscordBotTemplate
