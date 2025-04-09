@@ -32,6 +32,6 @@ const client = new ExtendedClient({
   await loadModals(client);
 })();
 
-client.login(env.DISCORD_TOKEN).catch((error) => {
+client.login(client.env('DISCORD_BOT_TOKEN')).catch((error) => {
   logger.error('Failed to log in:', error);
 });

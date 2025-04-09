@@ -17,10 +17,21 @@ export const registerCommands = async (
   const globalCommands: RESTPostAPIChatInputApplicationCommandsJSONBody[] = [];
   const guildCommandsMap = new Map<string, RESTPostAPIChatInputApplicationCommandsJSONBody[]>();
 
-  /**
-   * Iterates through the bot's registered commands and organizes slash commands
-   * into guild-specific and global categories for API registration.
-   */
+  await registeredCommands(client, globalCommands, guildCommandsMap)
+
+  try {
+    register(client, globalCommands, guildCommandsMap);
+    logger.info('✅ | Slash command registration complete.');
+  } catch (error) {
+    logger.error('❌ | Failed to register commands: ' + error);
+  }
+};
+
+const registeredCommands = async (
+  client: ExtendedClient,
+  globalCommands: RESTPostAPIChatInputApplicationCommandsJSONBody[],
+  guildCommandsMap: Map<string, RESTPostAPIChatInputApplicationCommandsJSONBody[]>,
+) => {
   for (const [, command] of client.commands) {
     if (!(command.data instanceof SlashCommandBuilder)) continue;
     const json = command.data.toJSON();
@@ -34,14 +45,7 @@ export const registerCommands = async (
       globalCommands.push(json);
     }
   }
-
-  try {
-    register(client, globalCommands, guildCommandsMap);
-    logger.info('✅ | Slash command registration complete.');
-  } catch (error) {
-    logger.error('❌ | Failed to register commands: ' + error);
-  }
-};
+}
 
 const register = async (
   client: ExtendedClient,
