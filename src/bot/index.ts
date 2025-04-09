@@ -3,7 +3,6 @@ import { GatewayIntentBits, Partials } from 'discord.js';
 import { logger } from '@/utils';
 import { loadButtons, loadLoops, loadCommands, loadEvents } from './handler';
 import { loadModals } from './handler/modalHandler';
-import { env } from 'process';
 
 const client = new ExtendedClient({
   intents: [

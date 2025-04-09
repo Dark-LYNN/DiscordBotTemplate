@@ -3,6 +3,9 @@ import { REST, Routes, SlashCommandBuilder, RESTPostAPIChatInputApplicationComma
 import { ExtendedClient } from '@/types/extendedClient';
 import { logger } from '@/utils';
 
+type CommandJson = RESTPostAPIChatInputApplicationCommandsJSONBody;
+type GuildCommandMap = Map<string, CommandJson[]>;
+
 export const registerCommands = async (
   client: ExtendedClient,
 ):Promise<void> => {
@@ -14,10 +17,10 @@ export const registerCommands = async (
     return;
   }
 
-  const globalCommands: RESTPostAPIChatInputApplicationCommandsJSONBody[] = [];
+  const globalCommands: CommandJson[] = [];
   const guildCommandsMap = new Map<string, RESTPostAPIChatInputApplicationCommandsJSONBody[]>();
 
-  await registeredCommands(client, globalCommands, guildCommandsMap)
+  await registeredCommands(client, globalCommands, guildCommandsMap);
 
   try {
     register(client, globalCommands, guildCommandsMap);
@@ -29,8 +32,8 @@ export const registerCommands = async (
 
 const registeredCommands = async (
   client: ExtendedClient,
-  globalCommands: RESTPostAPIChatInputApplicationCommandsJSONBody[],
-  guildCommandsMap: Map<string, RESTPostAPIChatInputApplicationCommandsJSONBody[]>,
+  globalCommands: CommandJson[],
+  guildCommandsMap: GuildCommandMap,
 ) => {
   for (const [, command] of client.commands) {
     if (!(command.data instanceof SlashCommandBuilder)) continue;
@@ -45,7 +48,7 @@ const registeredCommands = async (
       globalCommands.push(json);
     }
   }
-}
+};
 
 const register = async (
   client: ExtendedClient,
