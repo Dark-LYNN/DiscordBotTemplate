@@ -1,8 +1,8 @@
 # Discord.js Bot Template (TypeScript)
 
 [![Maintainability][maintainabilityImage]][maintainabilityURL]
-[![Discord.js][discordJSBadge]][discordjsURL]
 [![Code Coverage][coverageImage]][coverageLink]
+[![Discord.js][discordJSBadge]][discordjsURL]
 [![License: BSD-4-Clause][licenseBadge]][licenseURL]
 
 This is a template for a Discord.js bot written in TypeScript.
