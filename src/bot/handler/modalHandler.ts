@@ -50,11 +50,14 @@ export const modalHandler = async (
       err,
     );
     console.error(err);
-    modalFollowup(client, interaction)
+    modalFollowup(client, interaction);
   }
 };
 
-const modalFollowup = async (client: ExtendedClient, interaction: Interaction) => {
+const modalFollowup = async (
+  client: ExtendedClient,
+  interaction: Interaction,
+) => {
   if (interaction.isModalSubmit()) {
     if (interaction.replied || interaction.deferred) {
       try {
@@ -77,4 +80,4 @@ const modalFollowup = async (client: ExtendedClient, interaction: Interaction) =
   } else {
     logger.warn('⚠️ | Interaction is not a modal submit interaction.');
   }
-}
+};

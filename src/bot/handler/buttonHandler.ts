@@ -30,7 +30,6 @@ export const loadButtons = async (
   return;
 };
 
-
 export const buttonHandler = async (
   client: ExtendedClient,
   interaction: Interaction,
@@ -55,6 +54,14 @@ export const buttonHandler = async (
       err,
     );
     console.error(err);
+    interactionFollowup(interaction);
+  }
+};
+
+const interactionFollowup = async (
+  interaction: ButtonInteraction,
+): Promise<void> => {
+  if (interaction.isButton()) {
     if (interaction.replied || interaction.deferred) {
       try {
         await interaction.followUp({ content: 'There was an error handling this button.', flags: 'Ephemeral' });
@@ -73,5 +80,4 @@ export const buttonHandler = async (
       }
     }
   }
-  return;
 };
