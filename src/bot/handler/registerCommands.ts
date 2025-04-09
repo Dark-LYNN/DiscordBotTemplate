@@ -14,7 +14,6 @@ export const registerCommands = async (
     return;
   }
 
-  const rest = new REST({ version: '10' }).setToken(token);
   const globalCommands: RESTPostAPIChatInputApplicationCommandsJSONBody[] = [];
   const guildCommandsMap = new Map<string, RESTPostAPIChatInputApplicationCommandsJSONBody[]>();
 
@@ -37,35 +36,46 @@ export const registerCommands = async (
   }
 
   try {
-    /**
-     * @description Register global commands
-     */
-    if (globalCommands.length > 0) {
-      logger.info(`🌍 | Registering ${globalCommands.length} global commands...`);
-      await rest.put(
-        Routes.applicationCommands(clientId),
-        { body: globalCommands },
-      );
-    }
-
-    /**
-     * @description Register guild only commands.
-     */
-    for (const [guildId, commands] of guildCommandsMap.entries()) {
-      try {
-        logger.info(`🏠 | Registering ${commands.length} commands to guild: ${guildId}`);
-        await rest.put(
-          Routes.applicationGuildCommands(clientId, guildId),
-          { body: commands },
-        );
-      } catch (err) {
-        logger.warn(`⚠️ | Failed to register commands to guild ${guildId}: ${err}`);
-        continue;
-      }
-    }
-
+    register(client, globalCommands, guildCommandsMap);
     logger.info('✅ | Slash command registration complete.');
   } catch (error) {
     logger.error('❌ | Failed to register commands: ' + error);
+  }
+};
+
+const register = async (
+  client: ExtendedClient,
+  globalCommands: RESTPostAPIChatInputApplicationCommandsJSONBody[],
+  guildCommandsMap: Map<string, RESTPostAPIChatInputApplicationCommandsJSONBody[]>,
+) => {
+  const token = client.env('DISCORD_BOT_TOKEN');
+  const rest = new REST({ version: '10' }).setToken(token);
+  const clientId = client.env('DISCORD_CLIENT_ID');
+
+  /**
+   * @description Register global commands
+   */
+  if (globalCommands.length > 0) {
+    logger.info(`🌍 | Registering ${globalCommands.length} global commands...`);
+    await rest.put(
+      Routes.applicationCommands(clientId),
+      { body: globalCommands },
+    );
+  }
+
+  /**
+   * @description Register guild only commands.
+   */
+  for (const [guildId, commands] of guildCommandsMap.entries()) {
+    try {
+      logger.info(`🏠 | Registering ${commands.length} commands to guild: ${guildId}`);
+      await rest.put(
+        Routes.applicationGuildCommands(clientId, guildId),
+        { body: commands },
+      );
+    } catch (err) {
+      logger.warn(`⚠️ | Failed to register commands to guild ${guildId}: ${err}`);
+      continue;
+    }
   }
 };
