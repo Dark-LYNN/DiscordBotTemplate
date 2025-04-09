@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Dark-LYNN/RepoTemplate/compare/v1.1.0...v1.2.0) (2025-04-09)
+
+
+### Features
+
+* Added a better guild slash command handler. ([26dd0f5](https://github.com/Dark-LYNN/RepoTemplate/commit/26dd0f5c3d6831412e41f747d404e535fb0596a7))
+
+
+### Bug Fixes
+
+* buttons had wrong path input. ([dcc1695](https://github.com/Dark-LYNN/RepoTemplate/commit/dcc16950bbd2ba93c11ea8c3f41db99086964e83))
+
+
+### Chores
+
+* Fixed linting issues. ([17de039](https://github.com/Dark-LYNN/RepoTemplate/commit/17de039b3d0671efc87523a69d8c911deeaf3478))
+* Function with high complexity (count = 22): buttonHandler. ([0e965a6](https://github.com/Dark-LYNN/RepoTemplate/commit/0e965a6f22aedda6f54beb60d7541b2bd00b1f15))
+* Function with high complexity (count = 22): modalHandler. ([2e1cf80](https://github.com/Dark-LYNN/RepoTemplate/commit/2e1cf80102bc92bf11b857c5dc9466c2257979b7))
+* Function with high complexity (count = 33): registerCommands. ([3557d33](https://github.com/Dark-LYNN/RepoTemplate/commit/3557d337782ed1b974e2c0571130c6bae7a29423))
+
+
+### Code Refactoring
+
+* Formatting. ([bae5994](https://github.com/Dark-LYNN/RepoTemplate/commit/bae5994ce6596dcb678394ac850fa1d11986dcb0))
+* Formatting. ([2bfdf57](https://github.com/Dark-LYNN/RepoTemplate/commit/2bfdf5763ed44a61a3045e03d3a788067ac1af20))
+* Formatting. ([0e7caef](https://github.com/Dark-LYNN/RepoTemplate/commit/0e7caef3ab7be1cf2dfba699310a4db0564247ce))
+* Formatting. ([edece49](https://github.com/Dark-LYNN/RepoTemplate/commit/edece49eb69a149461f951b124f3c538c99dc67a))
+
 ## 1.1.0 (2025-04-01)
 
 
