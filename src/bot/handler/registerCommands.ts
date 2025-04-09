@@ -1,31 +1,71 @@
-import { REST, Routes, SlashCommandBuilder } from 'discord.js';
+/* eslint-disable max-len */
+import { REST, Routes, SlashCommandBuilder, RESTPostAPIChatInputApplicationCommandsJSONBody } from 'discord.js';
 import { ExtendedClient } from '@/types/extendedClient';
 import { logger } from '@/utils';
 
 export const registerCommands = async (
   client: ExtendedClient,
 ):Promise<void> => {
-  if (!client.env('DISCORD_BOT_TOKEN') || !client.env('DISCORD_CLIENT_ID')) {
+  const token = client.env('DISCORD_BOT_TOKEN');
+  const clientId = client.env('DISCORD_CLIENT_ID');
+
+  if (!token || !clientId) {
     logger.error('❌ | Missing TOKEN or CLIENT_ID in .env file!');
     return;
   }
 
-  const rest = new REST({ version: '10' }).setToken(`${client.env('DISCORD_BOT_TOKEN')}`);
+  const rest = new REST({ version: '10' }).setToken(token);
+  const globalCommands: RESTPostAPIChatInputApplicationCommandsJSONBody[] = [];
+  const guildCommandsMap = new Map<string, RESTPostAPIChatInputApplicationCommandsJSONBody[]>();
+
+  /**
+   * Iterates through the bot's registered commands and organizes slash commands
+   * into guild-specific and global categories for API registration.
+   */
+  for (const [, command] of client.commands) {
+    if (!(command.data instanceof SlashCommandBuilder)) continue;
+    const json = command.data.toJSON();
+
+    if (Array.isArray(command.guilds) && command.guilds.length > 0) {
+      for (const guildId of command.guilds) {
+        if (!guildCommandsMap.has(guildId)) guildCommandsMap.set(guildId, []);
+        guildCommandsMap.get(guildId)!.push(json);
+      }
+    } else {
+      globalCommands.push(json);
+    }
+  }
 
   try {
-    logger.info('🔃 | Registering slash commands...');
+    /**
+     * @description Register global commands
+     */
+    if (globalCommands.length > 0) {
+      logger.info(`🌍 | Registering ${globalCommands.length} global commands...`);
+      await rest.put(
+        Routes.applicationCommands(clientId),
+        { body: globalCommands },
+      );
+    }
 
-    const commands = client.commands
-      .map(cmd => cmd.data instanceof SlashCommandBuilder
-        ? cmd.data.toJSON()
-        : null,
-      ).filter(Boolean); // Remove any null values
+    /**
+     * @description Register guild only commands.
+     */
+    for (const [guildId, commands] of guildCommandsMap.entries()) {
+      try {
+        logger.info(`🏠 | Registering ${commands.length} commands to guild: ${guildId}`);
+        await rest.put(
+          Routes.applicationGuildCommands(clientId, guildId),
+          { body: commands },
+        );
+      } catch (err) {
+        logger.warn(`⚠️ | Failed to register commands to guild ${guildId}: ${err}`);
+        continue;
+      }
+    }
 
-    await rest.put(Routes.applicationGuildCommands(`${client.env('DISCORD_CLIENT_ID')}`, `${client.env('DISCORD_GUILD_ID')}`), { body: commands });
-
-    logger.info(`✅ | Successfully registered ${commands.length} commands!`);
+    logger.info('✅ | Slash command registration complete.');
   } catch (error) {
-    logger.error('❌ | Failed to register commands:' + error);
+    logger.error('❌ | Failed to register commands: ' + error);
   }
-  return;
 };

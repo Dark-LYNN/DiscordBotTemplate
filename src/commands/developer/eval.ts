@@ -3,14 +3,14 @@ import { ExtendedClient } from '../../types/extendedClient';
 import { logger } from '../../utils';
 
 export default {
+  guilds: ['123456789012345678', '876543210987654321'], // Only register to these guilds. (These are temp guilds)
   data: new SlashCommandBuilder()
     .setName('eval')
     .setDescription('Evaluates JavaScript code (dev only))')
     .addStringOption((option) =>
-      option
-        .setName('code')
-        .setDescription('Code to evaluate.')
-        .setRequired(true),
+      option.setName('code')
+      .setDescription('Code to evaluate.')
+      .setRequired(true),
     ),
 
   async execute(
