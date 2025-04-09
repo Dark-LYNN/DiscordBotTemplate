@@ -40,14 +40,29 @@ const registeredCommands = async (
     const json = command.data.toJSON();
 
     if (Array.isArray(command.guilds) && command.guilds.length > 0) {
-      for (const guildId of command.guilds) {
-        if (!guildCommandsMap.has(guildId)) guildCommandsMap.set(guildId, []);
-        guildCommandsMap.get(guildId)!.push(json);
-      }
+      handleGuildCommands(command.guilds, json, guildCommandsMap);
     } else {
-      globalCommands.push(json);
+      handleGlobalCommand(json, globalCommands);
     }
   }
+};
+
+const handleGuildCommands = (
+  guilds: string[],
+  json: CommandJson,
+  guildCommandsMap: GuildCommandMap
+) => {
+  for (const guildId of guilds) {
+    if (!guildCommandsMap.has(guildId)) guildCommandsMap.set(guildId, []);
+    guildCommandsMap.get(guildId)!.push(json);
+  }
+};
+
+const handleGlobalCommand = (
+  json: CommandJson,
+  globalCommands: CommandJson[]
+) => {
+  globalCommands.push(json);
 };
 
 const register = async (
