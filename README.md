@@ -129,7 +129,7 @@ See the [LICENSE](./LICENSE) file for details.
 
 Thanks to all contributors and open-source projects that inspired this template.
 
-[maintainabilityImage]: https://qlty.sh/badges/3c84a17d-831c-4f7d-bf04-3b587065f27b/maintainability.svg
+[maintainabilityImage]: https://qlty.sh/badges/3c84a17d-831c-4f7d-bf04-3b587065f27b/maintainability.svg?v2
 [maintainabilityURL]: https://qlty.sh/gh/Dark-LYNN/projects/DiscordBotTemplate
 [discordJSBadge]: https://img.shields.io/badge/discord.js-^14.18.0-orange
 [discordjsURL]: https://discord.js.org/
