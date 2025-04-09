@@ -24,7 +24,10 @@ jobs:
 
       - name: Set up the database
         run: |
-          npm run db  # Run Prisma setup
+          npm run db
+        env:
+          DATABASE_URL: "file:./database.db"
+
 
       - name: Run tests with coverage
         run: |
