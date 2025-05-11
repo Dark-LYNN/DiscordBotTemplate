@@ -16,7 +16,7 @@
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = [
-            pkgs.nodejs_23
+            pkgs.nodejs_24
             pkgs.prisma-engines
             pkgs.pnpm
             pkgs.direnv
