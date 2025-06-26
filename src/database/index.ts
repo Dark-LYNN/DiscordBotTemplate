@@ -1,5 +1,13 @@
-import { PrismaClient } from '@prisma/client';
+import { Kysely, SqliteDialect } from 'kysely'
+import Database from 'better-sqlite3'
+import { Database as DBTypes } from './db.types'
 
-const prisma = new PrismaClient();
+const dbPath = 'database/database.db'
 
-export { prisma };
+const db = new Kysely<DBTypes>({
+  dialect: new SqliteDialect({
+    database: new Database(dbPath),
+  }),
+});
+
+export default db;

@@ -1,41 +1,35 @@
-import { PrismaClient } from '@prisma/client';
+import db from '@/database'
+import { sql } from 'kysely'
+import { beforeAll, afterAll, describe, it, expect } from '@jest/globals'
 
-describe('Database Operations', () => {
-  let prisma: PrismaClient;
-  let createdUserId: string;
+describe('Database Operations (Kysely)', () => {
+  const testUserId = 'some-unique-id'
 
-  beforeAll(() => {
-    prisma = new PrismaClient();
-  });
+  beforeAll(async () => {
+    await sql`
+      CREATE TABLE IF NOT EXISTS test (
+        user_id TEXT PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
+      )
+    `.execute(db)
+
+    await db.deleteFrom('test').where('user_id', '=', testUserId).execute()
+  })
 
   it('should create a user in the database', async () => {
-    // Create a new user
-    const newUser = await prisma.test.create({
-      data: {
-        user_id: 'some-unique-id',
-      },
-    });
+    await db.insertInto('test').values({ user_id: testUserId }).execute()
 
-    // Store the user ID for later deletion
-    createdUserId = newUser.user_id;
+    const result = await db
+      .selectFrom('test')
+      .selectAll()
+      .where('user_id', '=', testUserId)
+      .executeTakeFirstOrThrow()
 
-    // Assert the user was created
-    expect(newUser).toHaveProperty('user_id', 'some-unique-id');
-    expect(newUser).toHaveProperty('createdAt');
-    expect(newUser.createdAt).toBeInstanceOf(Date);
-  });
+    expect(result.user_id).toBe(testUserId)
+    expect(new Date(result.createdAt)).toBeInstanceOf(Date)
+  })
 
   afterAll(async () => {
-    // Cleanup: Delete the user we just created
-    if (createdUserId) {
-      await prisma.test.delete({
-        where: {
-          user_id: createdUserId,
-        },
-      });
-    }
-
-    // Close Prisma Client connection
-    await prisma.$disconnect();
-  });
-});
+    await db.deleteFrom('test').where('user_id', '=', testUserId).execute()
+  })
+})

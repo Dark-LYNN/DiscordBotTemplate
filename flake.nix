@@ -1,8 +1,8 @@
 {
-  description = "Your Akira API development environment";
+  description = "Bot Template environment for NIX";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";  # Or a specific commit
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -17,18 +17,11 @@
         devShells.default = pkgs.mkShell {
           buildInputs = [
             pkgs.nodejs_24
-            pkgs.prisma-engines
             pkgs.pnpm
             pkgs.direnv
             pkgs.openssl
+            pkgs.git
           ];
-
-          shellHook = ''
-            export PRISMA_QUERY_ENGINE_BINARY="${pkgs.prisma-engines}/bin/query-engine"
-            export PRISMA_SCHEMA_ENGINE_BINARY="${pkgs.prisma-engines}/bin/schema-engine"
-            export PRISMA_FMT_BINARY="${pkgs.prisma-engines}/bin/prisma-fmt"
-            export PRISMA_ENGINES_CHECKSUM_IGNORE_MISSING="1"
-          '';
         };
       }
     );
