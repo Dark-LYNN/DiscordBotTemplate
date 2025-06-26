@@ -1,9 +1,9 @@
-import db from '@/database'
-import { sql } from 'kysely'
-import { beforeAll, afterAll, describe, it, expect } from '@jest/globals'
+import db from '@/database';
+import { sql } from 'kysely';
+import { beforeAll, afterAll, describe, it, expect } from '@jest/globals';
 
 describe('Database Operations (Kysely)', () => {
-  const testUserId = 'some-unique-id'
+  const testUserId = 'some-unique-id';
 
   beforeAll(async () => {
     await sql`
@@ -11,25 +11,25 @@ describe('Database Operations (Kysely)', () => {
         user_id TEXT PRIMARY KEY,
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
       )
-    `.execute(db)
+    `.execute(db);
 
-    await db.deleteFrom('test').where('user_id', '=', testUserId).execute()
-  })
+    await db.deleteFrom('test').where('user_id', '=', testUserId).execute();
+  });
 
   it('should create a user in the database', async () => {
-    await db.insertInto('test').values({ user_id: testUserId }).execute()
+    await db.insertInto('test').values({ user_id: testUserId }).execute();
 
     const result = await db
       .selectFrom('test')
       .selectAll()
       .where('user_id', '=', testUserId)
-      .executeTakeFirstOrThrow()
+      .executeTakeFirstOrThrow();
 
-    expect(result.user_id).toBe(testUserId)
-    expect(new Date(result.createdAt)).toBeInstanceOf(Date)
-  })
+    expect(result.user_id).toBe(testUserId);
+    expect(new Date(result.createdAt)).toBeInstanceOf(Date);
+  });
 
   afterAll(async () => {
-    await db.deleteFrom('test').where('user_id', '=', testUserId).execute()
-  })
-})
+    await db.deleteFrom('test').where('user_id', '=', testUserId).execute();
+  });
+});
