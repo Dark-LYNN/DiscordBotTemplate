@@ -15,7 +15,7 @@ comes with essential GitHub-related files.
 
 - Written in **TypeScript** for type safety.
 - Supports **pnpm**, **npm**, and **yarn** for installation.
-- Uses **Prisma** as the database ORM.
+- Uses [**kysely**](https://kysely.dev/docs/getting-started) as the database ORM.
 - Pre-configured **ESLint** and **Prettier** for code quality.
 - Includes **GitHub-related** files (e.g., `.gitignore`, `LICENSE`, `Issue Templates`).
 - Organized structure with handlers for commands, events, interactions, and loops.
@@ -25,11 +25,12 @@ Project Structure
 
 ```txt
 .
-├── prisma               # Prisma schema and database file
-├── scripts              # Package scripts (DB setup, linting, etc.)
+├── database             # default location for database files.
+├── scripts              # Package scripts (DB setup, linting, etcetera.)
 ├── src                  # Source code
 │   ├── bot              # Core bot logic
 │   ├── commands         # Command files
+│   ├── database         # Database related files.
 │   ├── events           # Event listeners
 │   ├── middleware       # Middleware for permission checks
 │   ├── tests            # Unit tests
@@ -71,8 +72,6 @@ Project Structure
    - Add your bot token and database URL:
 
      ```env
-     DATABASE_URL=file:./database.db
-
      DISCORD_TOKEN=your-bot-token
      DISCORD_CLIENT_ID=your-bot-client-id
      ```
@@ -80,7 +79,7 @@ Project Structure
 4. Initialize the database:
 
    ```bash
-   npm run db  # or pnpm db / yarn db
+   npm run db:migrate  # or pnpm db:migrate / yarn db:migrate
    ```
 
 ## Usage
