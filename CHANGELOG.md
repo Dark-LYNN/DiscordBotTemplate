@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.1](https://github.com/Dark-LYNN/RepoTemplate/compare/v1.2.0...v1.2.1) (2025-06-26)
+
+
+### Chores
+
+*  Function with high complexity (count = 25): registerCommands. ([c51743b](https://github.com/Dark-LYNN/RepoTemplate/commit/c51743bdc468660e855d02876157a313b8e0396b))
+* Function with high complexity (count = 20): registerCommands. ([41bf437](https://github.com/Dark-LYNN/RepoTemplate/commit/41bf4375f16234f0e189cf80fefe20b39129d532))
+* linting ([2664915](https://github.com/Dark-LYNN/RepoTemplate/commit/266491529551994b982815e83e13f063c33b2d32))
+* Linting ([f7d51fc](https://github.com/Dark-LYNN/RepoTemplate/commit/f7d51fc248c55cfa89609c15b31f7b98960e4f35))
+
+
+### Code Refactoring
+
+* migrate database ORM from Prisma to Kysely ([587c0fd](https://github.com/Dark-LYNN/RepoTemplate/commit/587c0fd01fb8ea17799a6ab83e8377a245ac0aaf))
+
 ## [1.2.0](https://github.com/Dark-LYNN/RepoTemplate/compare/v1.1.0...v1.2.0) (2025-04-09)
 
 
