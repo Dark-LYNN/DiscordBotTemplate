@@ -27,15 +27,11 @@ jobs:
 
       - name: Set up the database
         run: |
-          npm run db
-        env:
-          DATABASE_URL: "file:./database.db"
+          npm run db:migrate
 
       - name: Run tests with coverage
         run: |
           npm run test --coverage
-        env:
-          DATABASE_URL: "file:./database.db"
 
       - name: Upload coverage to Qlty
         uses: qltysh/qlty-action/coverage@main
