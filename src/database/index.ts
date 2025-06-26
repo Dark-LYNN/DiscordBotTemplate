@@ -1,6 +1,6 @@
-import { Kysely, SqliteDialect } from 'kysely'
-import Database from 'better-sqlite3'
-import { Database as DBTypes } from './db.types'
+import { Kysely, SqliteDialect } from 'kysely';
+import Database from 'better-sqlite3';
+import { Database as DBTypes } from './db.types';
 
 const dbPath = 'database/database.db'
 
